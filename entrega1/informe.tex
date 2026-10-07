@@ -1,0 +1,62 @@
+% Compilar con XeLaTeX + Biber. Véase COMPILACION.md.
+\documentclass[12pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+% Evita el conflicto entre abreviaciones activas de babel y biblatex-apa.
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,longtable,array}
+\usepackage{pdflscape}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa]{biblatex}
+\addbibresource{referencias.bib}
+\usepackage[hidelinks]{hyperref}
+\graphicspath{{figuras/}}
+\onehalfspacing
+\setlength{\emergencystretch}{2em}
+\newcommand{\pendiente}[1]{\par\noindent\textcolor{red!65!black}{\textbf{Pendiente:} #1}\par}
+\input{datos}
+\begin{document}
+\begin{titlepage}
+\centering
+{\Large \NombreRamo\par}
+\vspace{2cm}
+{\LARGE\bfseries Análisis Estratégico de NubeSegura SpA\par}
+\vspace{0.8cm}
+{\large Entrega 1: Diagnóstico y Fundamentos Estratégicos\par}
+\vfill
+{\large \NumeroGrupo\par}
+\vspace{0.5cm}
+\Integrantes
+\vspace{1cm}
+Profesor: \NombreProfesor\par
+\vfill
+\FechaEntrega
+\end{titlepage}
+\tableofcontents
+\newpage
+\section*{Introducción}
+\addcontentsline{toc}{section}{Introducción}
+\input{secciones/00_introduccion}
+\section{Diagnóstico y Fundamentos Estratégicos}
+\subsection{Presentación de la Empresa y su Rol}
+\input{secciones/01_empresa}
+\subsection{Análisis Estratégico Inicial}
+\input{secciones/02_mision_vision_actual}
+\input{secciones/03_pestel}
+\input{secciones/04_porter}
+\input{secciones/05_foda}
+\subsection{Propuesta de Valor y Estrategia Competitiva}
+\input{secciones/06_estrategia}
+\section*{Conclusiones y Recomendaciones Estratégicas}
+\addcontentsline{toc}{section}{Conclusiones y Recomendaciones Estratégicas}
+\input{secciones/07_conclusiones}
+\clearpage
+\printbibliography[heading=bibintoc,title={Bibliografía}]
+\end{document}
+

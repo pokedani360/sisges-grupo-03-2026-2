@@ -1,0 +1,26 @@
+# Archivos auxiliares de LaTeX
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.bak
+# PDF generado; conservar las fuentes y figuras PDF
+/entrega1/informe.pdf
+/entrega1/build/
+.DS_Store
+Thumbs.db
+
+/entrega1/InformeFinal Grupo*.pdf
